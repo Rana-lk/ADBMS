@@ -92,3 +92,9 @@ select * from course;
 
 delete from student where student_name='smith' and student_number=17 ;
 select * from student;
+
+select student.student_name,course.course_name,course.course_number,course.credit_hours,section.semester,section.years,grade_report.grade from student
+inner join grade_report on student.student_number=grade_report.student_number
+inner join section on section.section_identifier=grade_report.section_identifier
+inner join course on course.course_number=section.course_number
+where major='cs' and class=2;

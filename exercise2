@@ -69,8 +69,6 @@ select prerequisite.prerequisite_number from course
 inner join prerequisite on course.course_number=prerequisite.course_number
 where course_name="Database";
 
-select student.student_name from student where major="cs";
-
 select course.course_name from course 
 inner join section on course.course_number=section.course_number
 where instructor="king" and years=07 and 08;

@@ -1,3 +1,3 @@
-# Adavanced Data Structure Lab
+# Adavanced Database Management Systems Lab
 
 

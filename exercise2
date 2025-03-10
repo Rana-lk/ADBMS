@@ -73,7 +73,7 @@ select course.course_name from course
 inner join section on course.course_number=section.course_number
 where instructor="king" and years=07 and 08;
 
-select section.course_number,section.semester,count(grade_report.student_number) as student_count from section 
+select section.course_number,section.semester,section.years,count(grade_report.student_number) as student_count from section 
 inner join grade_report on grade_report.section_identifier=section.section_identifier
 where instructor="king"
-GROUP BY section.course_number, section.semester;
+GROUP BY section.course_number, section.semester,section.years;

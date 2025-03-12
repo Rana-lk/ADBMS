@@ -98,3 +98,6 @@ inner join grade_report on student.student_number=grade_report.student_number
 inner join section on section.section_identifier=grade_report.section_identifier
 inner join course on course.course_number=section.course_number
 where major='cs' and class=2;
+
+create view names as select student_name from student where major='cs';
+select * from names;
